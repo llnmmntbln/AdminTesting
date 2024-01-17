@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/red.png" type="image/x-icon">
+    <title>Admin Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .navbar {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: #f5f3f3;
+            top: 0;
+            left: 0;
+            position: fixed;
+            align-items: center;
+            z-index: 99;
+            height: 90px;
+            border-bottom: 2px solid rgba(11, 0, 39, 0.068);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background: #f5f3f3;
+            padding: 0px;
+            height: 12vh;
+            justify-content: center;
+        }
+
+
+        .img-fluid {
+            width: 150px;
+            height: auto;
+            position: relative;
+            margin-bottom: -15px;
+        }
+
+        .navbar .nav-links {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navbar-inverse .navbar-nav>li>a:hover {
+            color: #EBA814;
+        }
+
+
+        .container {
+            background: linear-gradient(180deg, #c2222280 5%, rgba(39, 51, 153, 0.6) 100%), url(https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/maxresdefault.jpg) center/cover no-repeat;
+            width: -webkit-fill-available;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: linear-gradient(150deg, rgb(230 13 13 / 58%) 48%, rgb(12 53 66 / 63%) 68%);
+            border-radius: 10px;
+            border: none;
+            padding: 20px;
+            max-width: 410px;
+            height: 50vh;
+            width: 100%;
+            text-align: center;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background: white;
+        }
+
+        input[type=checkbox],
+        input[type=radio] {
+            margin: 0px 2px 0;
+            line-height: normal;
+        }
+
+        .yellow-text {
+            color: #EBA814;
+        }
+
+        .yellow-text b {
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .yellow-text:hover {
+            color: #EBA814;
+        }
+
+        .white-text {
+            color: white;
+            margin-top: 1.5vh;
+            width: 50%;
+            background-color: #f89b31;
+            border: none;
+            border-radius: 5px;
+            height: 5vh;
+            font-size: 2vh;
+        }
+
+        .white-text:hover {
+            background-color: #709de8;
+        }
+
+        .white-text-only {
+            color: white;
+            display: flex;
+            margin-top: 1vh;
+            align-items: center;
+        }
+
+        .sign-up {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 2.5vh;
+        }
+
+        .text-right {
+            text-align: center;
+        }
+
+        a {
+            color: #f89b31;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #1495eb;
+            text-decoration: none;
+        }
+
+
+        a.btn.btn-blockCreate {
+            width: 72%;
+            height: 40px;
+            display: inline-flex;
+            text-decoration: none;
+            color: #f9f9f9;
+            align-items: center;
+            margin-top: 5px;
+            justify-content: center;
+        }
+
+        .btn-blockCreate {
+            border: none;
+            background-color: #709de8;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+
+        a.btn-blockCreate:hover {
+            background-color: #11566b;
+            color: white;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .navbar-inverse .navbar-nav>li>a {
+                margin-right: -50px;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+    <nav class="navbar navbar-inverse">
+        <div class="logo-image">
+            <img src="https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/ISKONNECT%20(1).png"
+                class="img-fluid">
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="box">
+            <form id="loginForm">
+                <h1 class="yellow-text"><b>ADMIN</b></h1>
+                <input type="text" placeholder="Admin Username" id="adminUsername" name="adminUsername">
+                <input type="password" placeholder="Password" id="adminPassword" name="adminPassword">
+                <button type="button" class="white-text" onclick="login()">Login</button>
+            </form>
+
+
+            <div class="text-right" style="margin-top: 2vh;">
+                <a href="C:\Users\PC\Desktop\updated\adminforgotpassword.html" class="forget-link">Forgot password?</a>
+            </div>
+
+            <hr style="border: 1px solid #ffffff;
+            margin-top: 15px;">
+
+            <div class="sign-up">
+                No account yet? <a href="C:\Users\PC\Desktop\updated3.0\admin_signup.html"
+                    class="btn btn-blockCreate">Create
+                    Account</a>
+            </div>
+        </div>
+
+
+        <script>
+
+            function login() {
+                // Get the values from the input fields
+                var username = document.getElementById("adminUsername").value;
+                var password = document.getElementById("adminPassword").value;
+
+                // username is "admin" and the password is "password"
+                if (username === "admin" && password === "password") {
+                    window.location.href = "C:\\Users\\PC\\Desktop\\updated\\adminprofile.html";
+                } else {
+                    alert("Invalid username or password. Please try again.");
+                }
+            }
+        </script>
+</body>
+
+</html>

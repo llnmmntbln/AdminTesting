@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create Account</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/red.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            background: #0c3542;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(255, 255, 255);
+            border-radius: 2em;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dbd9d9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: linear-gradient(180deg, rgba(230, 13, 13, 0.5) 5%, rgba(21, 39, 139, 0.6) 100%), url(https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/maxresdefault.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .logo-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background: #f5f3f3;
+            padding: 0px;
+            height: 12vh;
+            justify-content: center;
+        }
+
+
+        .img-fluid {
+            width: 160px;
+            height: auto;
+            right: 50px;
+            position: relative;
+        }
+
+        #sign-up-form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #colored-background {
+            background-color: #ffffff85;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 90vh;
+            margin: auto;
+            margin-top: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            height: 40px;
+            padding-right: 35px;
+        }
+
+        select.form-control {
+            height: 40px;
+        }
+
+        .checkbox-label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .btn-sbmt {
+            background-color: #00273d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-sbmt:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            background: #f5f3f3;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .bg-primary {
+            color: #fff;
+            font-size: 1.5em;
+            background-color: #00273d;
+        }
+
+        .col-auto {
+            display: flex;
+            align-items: center;
+        }
+
+        span {
+            color: #a92525;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #f5f3f3;
+        }
+
+        .navbar-back {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #00273d;
+        }
+
+        .back-icon {
+            margin-right: 5px;
+        }
+
+        .back-icon::before {
+            content: '\e079';
+            font-family: 'Glyphicons Halflings';
+            font-size: 18px;
+            color: #00273d;
+        }
+
+        @media only screen and (max-width: 790px) {
+            #colored-background {
+                width: 52vh;
+                margin-bottom: 5vh;
+            }
+
+            .img-fluid {
+                width: 120px;
+                height: auto;
+                left: 60px;
+            }
+        }
+
+        .tooltip-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 300px;
+            color: #00273d;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: -15%;
+            left: 600%;
+            margin-left: -70px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 12px;
+        }
+
+        .tooltip-wrapper:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .fa-eye {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="header">
+            <a href="C:\Users\PC\Desktop\updated3.0\admin_login (1).html" class="navbar-back">
+                <span class="glyphicon glyphicon-chevron-left back-icon" style="margin-left: 25px;"></span>
+                <span class="navbar-brand mb-0">Back</span>
+            </a>
+            <div class="logo-image">
+                <img src="https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/ISKONNECT%20(1).png"
+                    class="img-fluid">
+            </div>
+        </div>
+    </header>
+
+    <div id="colored-background">
+        <form method="POST" action="" id="sign-up-form">
+
+            <!-- Account Information -->
+            <div id="sign-up-form-container" class="container mb-3">
+                <!-- Account Information Card -->
+                <div class="card">
+                    <div class="card-header text-center bg-primary text-white">
+                        Account Information
+                    </div>
+
+                    <div class="card-body">
+
+                        <!-- Full Name Input -->
+                        <div class="form-group">
+                            <input pattern="[A-Za-z ]+" title="Only letters are allowed" class="form-control"
+                                name="fullname" id="full-name" placeholder="Full Name" required>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="form-group">
+                            <input value="" type="email" minlength="20" class="form-control" name="email" id="email"
+                                placeholder="Email" required>
+                        </div>
+
+                        <!-- City Hall ID number Input -->
+                        <div class="form-group">
+                            <div class="tooltip-wrapper">
+                                <i class="glyphicon glyphicon-info-sign"></i>
+                                <div class="tooltip-text"><b>Enter the given City Hall ID Number </b></div>
+                            </div>
+                            <input type="text" minlength="8" class="form-control" name="cityhall_id_number"
+                                id="cityhall_id_number" placeholder="City Hall ID Number" required>
+                        </div>
+
+                        <!-- Last Name Input -->
+                        <div class="form-group">
+                            <input value="" type="" class="form-control" name="username" id="user-name"
+                                placeholder="Username" required>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Password" required>
+                            <i class="fa fa-eye" id="togglePassword" onclick="togglePassword('password')"></i>
+                        </div>
+
+                        <!-- Confirm Password Input -->
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="confirm-password" id="confirm-password"
+                                placeholder="Confirm Password" required oninput="checkPasswordMatch()">
+                            <i class="fa fa-eye" id="toggleConfirmPassword"
+                                onclick="togglePassword('confirm-password')"></i>
+                            <small id="passwordMatchAlert" style="color: rgb(151, 29, 29);"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required> Creating your account and you accept
+                                <a href="C:\Users\PC\Downloads\Terms and Condition.html" target="_blank"
+                                    class="text-primary">
+                                    <span>Terms and Conditions</span>
+                                </a>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group">
+                            <button type="submit" class="btn-sbmt" onclick="validateForm()"
+                                href="C:\Users\PC\Desktop\updated3.0\admin_login (1).html">Create Account</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-auto">
+                    <p class="mb-0">© Tanauan Iskonnect</p>
+                </div>
+                <div class="col-auto">
+                    <p class="mb-0">Capstone | BSIT 4-1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(inputId) {
+            var x = document.getElementById(inputId);
+            var icon = document.getElementById("toggle" + inputId);
+
+            if (x.type === "password") {
+                x.type = "text";
+                icon.className = "fa fa-eye-slash";
+            } else {
+                x.type = "password";
+                icon.className = "fa fa-eye";
+            }
+        }
+
+
+        function checkPasswordMatch() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var alertMessage = document.getElementById("passwordMatchAlert");
+
+            if (password !== confirmPassword) {
+                alertMessage.innerHTML = "Password do not match";
+            } else {
+                alertMessage.innerHTML = "";
+            }
+        }
+
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Password do not match");
+                return false;
+            }
+
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>

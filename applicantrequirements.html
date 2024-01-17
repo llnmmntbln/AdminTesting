@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/red.png" type="image/x-icon">
+    <title>Applicant Requirements</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 5%, rgba(87, 99, 189, 0.6) 100%), url(https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/maxresdefault.jpg);
+            display: flex;
+            flex-direction: column;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .fa-bars:before,
+        .fa-navicon:before {
+            color: white;
+        }
+
+        .header {
+            height: 100px;
+            width: 100%;
+            background: #f5f3f3;
+        }
+
+        nav {
+            width: 20%;
+            background-color: #E9E9E4;
+            overflow: hidden;
+            height: 86.5vh;
+            border-top-right-radius: 25px;
+        }
+
+        .logo-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background: #f5f3f3;
+            padding: 0px;
+            height: 12vh;
+            justify-content: center;
+        }
+
+
+        .img-fluid {
+            width: 150px;
+            height: auto;
+            position: relative;
+            margin-bottom: -15px;
+        }
+
+        ul {
+            padding-left: 60px;
+            padding-top: 30px;
+        }
+
+        li {
+            margin-top: 20px;
+        }
+
+        a {
+            color: #0C3542;
+            font-size: 0.8em;
+        }
+
+        .container {
+            background-color: #FFFFFF;
+            width: 100%;
+            padding: 0;
+            margin-top: 3.5vh;
+            display: flex;
+        }
+
+        .content {
+            transition: margin-left .5s;
+            padding: 16px;
+            margin: auto;
+            width: 90%;
+            height: 65vh;
+            background: linear-gradient(145deg, #e60d0deb 5%, rgb(12 53 66 / 98%) 100%);
+            border-radius: 25px;
+            margin-top: 35px;
+        }
+
+        .back-btn {
+            font-size: 30px;
+            cursor: pointer;
+            color: #e60d0deb;
+            top: 30px;
+            left: 45px;
+            position: fixed;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            z-index: 1;
+        }
+
+        .back-btn:hover {
+            color: #0C3542;
+        }
+
+        .table-title {
+            color: #ffffff;
+            font-weight: bold;
+            padding-top: 30px;
+            padding-left: 50px;
+        }
+
+        h3 {
+            color: #eba814;
+        }
+
+        h2 i {
+            margin-right: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 15px;
+            text-align: center;
+        }
+
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        h4 {
+            color: #FFFFFF;
+        }
+
+        .status-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .action-buttons {
+            margin-left: 10px;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+
+        .btn-success,
+        .btn-danger {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo-image">
+            <img src="https://raw.githubusercontent.com/llnmmntbln/T-Iskonnect/main/ISKONNECT%20(1).png"
+                class="img-fluid">
+        </div>
+        <a href="#" class="back-btn" onclick="goBack()"><i class="fas fa-arrow-left"></i></a>
+    </div>
+
+    <div id="main" class="content">
+        <div class="col-xs-12">
+            <table>
+                <tr>
+                    <h2 class="table-title"><i class="fa-solid fa-graduation-cap" style="color: #EBA814;"></i>Felix
+                        Gabriel Andaya</h2>
+                </tr>
+                <tr>
+                    <th>
+                        <h3>Requirements</h3>
+                    </th>
+                    <th>
+                        <h3>Filename</h3>
+                    </th>
+                    <th>
+                        <h3>Date</h3>
+                    </th>
+                    <th>
+                        <h3>Status</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Family Profile Form</h4>
+                    </td>
+                    <td>
+                        <h4>FPF-Felix.pdf</h4>
+                    </td>
+                    <td>
+                        <h4>January 2, 2024</h4>
+                    </td>
+                    <td>
+                        <div class="status-container">
+                            <div class="action-buttons">
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Decline</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Educational Assistance Form</h4>
+                    </td>
+                    <td>
+                        <h4>EAF-Felix.pdf</h4>
+                    </td>
+                    <td>
+                        <h4>January 2, 2024</h4>
+                    </td>
+                    <td>
+                        <div class="status-container">
+                            <div class="action-buttons">
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Decline</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Certified True Copy of Previous Grade</h4>
+                    </td>
+                    <td>
+                        <h4>CTC-Felix.pdf</h4>
+                    </td>
+                    <td>
+                        <h4>January 2, 2024</h4>
+                    </td>
+                    <td>
+                        <div class="status-container">
+                            <div class="action-buttons">
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Decline</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>School Registration Form</h4>
+                    </td>
+                    <td>
+                        <h4>REGFORM-Felix.pdf</h4>
+                    </td>
+                    <td>
+                        <h4>January 2, 2024</h4>
+                    </td>
+                    <td>
+                        <div class="status-container">
+                            <div class="action-buttons">
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Decline</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Certificate of Good Moral</h4>
+                    </td>
+                    <td>
+                        <h4>CGM-Felix.pdf</h4>
+                    </td>
+                    <td>
+                        <h4>January 2, 2024</h4>
+                    </td>
+                    <td>
+                        <div class="status-container">
+                            <div class="action-buttons">
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Decline</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Certificate of Residency</h4>
+                    </td>
+                    <td>
+                        <h4>COR-Felix.pdf</h4>
+                    </td>
+                    <td>
+                        <h4>January 2, 2024</h4>
+                    </td>
+                    <td>
+                        <div class="status-container">
+                            <div class="action-buttons">
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Decline</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+
+</html>
